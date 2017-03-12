@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidSampleApp</string>
+
+    <string name="main_hello_world">Hello World!</string>
+    <string name="main_color_red">Color Red (onClick Attribute)</string>
+    <string name="main_color_blue">Color Blue (ClickListener)</string>
+</resources>
