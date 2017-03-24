@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         //We can check the version api with
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
         //}
+
+        Toast.makeText(this, R.string.main_language_changed_message, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
