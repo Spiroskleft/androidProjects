@@ -2,8 +2,16 @@
     <string name="app_name">AndroidSampleApp</string>
 
     <string name="main_hello_world">Hello World!</string>
+    <string name="main_implicit_intent_btn">Test implicit intents</string>
     <string name="main_color_red">Color Red (onClick Attribute)</string>
     <string name="main_color_blue">Color Blue (ClickListener)</string>
     <string name="main_menu_change_language">EL/EN</string>
     <string name="main_language_changed_message">Language changed to English</string>
+
+    <string name="implicit_intent_url_hint">http://www.unipi.gr</string>
+    <string name="implicit_intent_url_btn">Go to url</string>
+    <string name="implicit_intent_phone_hint">+302102102101</string>
+    <string name="implicit_intent_phone_btn">Call number</string>
+    <string name="implicit_intent_choose">Choose App</string>
+    <string name="implicit_intent_action_not_supported">Action not supported</string>
 </resources>

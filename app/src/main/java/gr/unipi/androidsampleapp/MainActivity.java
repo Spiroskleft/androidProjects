@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Changes the locate of the application
+     * Changes the {@link Locale} of the application and updates the {@link Configuration}
      */
     private void changeLocale() {
         if (locale.getLanguage().equals("el")) {
@@ -92,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
+    /**
+     * Starts the {@link ImplicitIntentsActivity}
+     */
+    public void goToImplicitIntents(View view) {
+        Intent intent = new Intent(this, ImplicitIntentsActivity.class);
         startActivity(intent);
     }
 }

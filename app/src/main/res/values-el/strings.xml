@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="main_hello_world">Καλησπέρα!</string>
+    <string name="main_implicit_intent_btn">Δοκιμάστε τα implicit intents</string>
     <string name="main_language_changed_message">Η γλώσσα άλλαξε σε Ελληνικά</string>
+
+    <string name="implicit_intent_url_hint">http://www.unipi.gr</string>
+    <string name="implicit_intent_url_btn">Πλοηγηθείτε στη διεύθυνση</string>
+    <string name="implicit_intent_phone_hint">+302102102101</string>
+    <string name="implicit_intent_phone_btn">Κλήση αριθμού</string>
+    <string name="implicit_intent_choose">Επιλέξτε Εφαρμογή</string>
+    <string name="implicit_intent_action_not_supported">Η ενέργεια δεν υποστηρίζεται</string>
 </resources>

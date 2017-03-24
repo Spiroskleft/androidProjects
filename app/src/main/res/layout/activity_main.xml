@@ -40,4 +40,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <Button
+        android:id="@+id/btn_main_go_implicit_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToImplicitIntents"
+        android:text="@string/main_implicit_intent_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
