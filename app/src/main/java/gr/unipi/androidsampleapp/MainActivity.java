@@ -3,6 +3,7 @@ package gr.unipi.androidsampleapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -47,13 +48,23 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.menu_main_language:
-                changeLocale();
+               changeLocale();
+                Toast.makeText(this,R.string.main_activity_toast, Toast.LENGTH_LONG).show();
                 return true;
+            case R.id.menusu:
+                Toast.makeText(this,"Find a teacher now",Toast.LENGTH_LONG).show();
+               // openPage();
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -95,6 +106,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void openPage()
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tanea.gr"));
+        startActivity(intent);
+
+    }
+
     /**
      * Starts the {@link ImplicitIntentsActivity}
      */
@@ -102,4 +120,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ImplicitIntentsActivity.class);
         startActivity(intent);
     }
+
 }

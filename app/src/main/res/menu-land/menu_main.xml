@@ -11,9 +11,8 @@
     <item
         android:id="@+id/menusu"
         android:icon="@mipmap/ic_unipi_logo"
-        android:title="lalalala"
-        app:showAsAction="ifRoom|withText"
+        android:title="Teacher here"
+        app:showAsAction="always|withText"
         android:orderInCategory="2"
         />
-
 </menu>
