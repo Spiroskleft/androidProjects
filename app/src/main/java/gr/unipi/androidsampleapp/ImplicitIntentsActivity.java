@@ -89,7 +89,7 @@ public class ImplicitIntentsActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(PREFS_NAME, phoneText.getText().toString());
+        editor.putString(PREFS_PHONE, phoneText.getText().toString());
         editor.commit();
     }
 
