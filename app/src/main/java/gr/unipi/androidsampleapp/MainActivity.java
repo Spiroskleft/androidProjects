@@ -134,5 +134,10 @@ if (locale.getLanguage().equals("el")) {
         startActivity(intent);
     }
 
+    public void goToCamera(View view) {
+        Intent intent = new Intent(this, TestActivity.class);
+        startActivity(intent);
+    }
+
 
 }

@@ -50,14 +50,20 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <Button
+        android:id="@+id/buttonCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:onClick="goToCamera"
         android:text="Test Camera"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-app:layout_constraintTop_toBottomOf="@id/btn_main_go_implicit_intent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_main_go_implicit_intent" />
+
+    <ImageView
+        android:id="@+id/mImageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonCamera" />
 
 </android.support.constraint.ConstraintLayout>
 
