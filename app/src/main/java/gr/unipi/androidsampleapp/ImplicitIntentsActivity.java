@@ -1,6 +1,7 @@
 package gr.unipi.androidsampleapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
@@ -17,15 +18,22 @@ import android.widget.Toast;
 import java.util.List;
 
 public class ImplicitIntentsActivity extends AppCompatActivity {
+    private static final String PREFS_NAME = "SavedValues";
+    private static final String PREFS_PHONE = "SavedValues_Phone";
+
     private EditText urlText;
     private Button urlButton;
     private EditText phoneText;
     private Button phoneButton;
 
+    private SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_implicit_intents);
+
+        preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
         urlText = (EditText) findViewById(R.id.txt_implicit_intents_url);
         urlButton = (Button) findViewById(R.id.btn_implicit_intents_url);
@@ -66,6 +74,23 @@ public class ImplicitIntentsActivity extends AppCompatActivity {
                 callPhone();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String number = preferences.getString(PREFS_PHONE, "");
+        if (!"".equals(number)) {
+            phoneText.setText(number);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(PREFS_NAME, phoneText.getText().toString());
+        editor.commit();
     }
 
     /**
