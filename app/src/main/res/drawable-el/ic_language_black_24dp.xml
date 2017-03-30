@@ -8,9 +8,9 @@
     <!--android:pathData="M14.4,6L14,4H5v17h2v-7h5.6l0.4,2h7V6z"/>-->
 <!--</vector>-->
 <vector android:height="24dp" android:viewportHeight="371.18668"
-android:viewportWidth="576.08" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+android:viewportWidth="576.08" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android" >
 <path android:fillAlpha="1" android:fillColor="#252775"
     android:pathData="m205.2,82.7l0,-40.4l370.9,0l0,-42.3L0,0L0,206.8L205.2,206.8l0,-0.2l370.9,0l0,-42.3L205.2,164.3l0,-38.6l370.9,0l0,-42.3L205.9,83.3L205.9,125.4L124.5,125.4l0,81.3l-42.7,0l0,-81.3L0.5,125.4l0,-42.7L81.9,82.7l0,-81.3l42.7,0l0,81.3zM0,289.9L576.1,289.9l0,-42.3L0,247.6ZM0,371.2L576.1,371.2L576.1,328.9L0,328.9L0,371.2" android:strokeColor="#00000000"/>
 <path android:fillAlpha="1" android:fillColor="#252775"
     android:pathData="M2.7,2.7L573.4,2.7L573.4,368.5L2.7,368.5l0,-365.8zM576.1,0L0,0L0,371.2l576.1,0l0,-2.7 0,0 0,0 0,-368.5 0,0" android:strokeColor="#00000000"/>
-</vector>
+    </vector>

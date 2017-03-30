@@ -3,6 +3,7 @@ package gr.unipi.androidsampleapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
+if (locale.getLanguage().equals("el")) {
+           menu.findItem(R.id.menu_main_language).setIcon(R.drawable.ic_launcher);}
+        else
+            {menu.findItem(R.id.menu_main_language).setIcon(R.drawable.ic_launcher1);
+        }
+
         return true;
     }
 
@@ -56,9 +63,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
+
         switch (item.getItemId()) {
             case R.id.menu_main_language:
                changeLocale();
+
                 Toast.makeText(this,R.string.main_activity_toast, Toast.LENGTH_LONG).show();
                 return true;
             case R.id.menusu:
@@ -83,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
     private void changeLocale() {
         if (locale.getLanguage().equals("el")) {
             locale = new Locale("en");
+            locale.getDisplayCountry();
+
         } else if (locale.getLanguage().equals("en")) {
             locale = new Locale("el");
         }
@@ -94,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
         Configuration configuration = resources.getConfiguration();
         configuration.setLocale(locale);
         resources.updateConfiguration(configuration, displayMetrics);
+
+
 
         //We can check the version api with
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
@@ -120,5 +133,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ImplicitIntentsActivity.class);
         startActivity(intent);
     }
+
 
 }
