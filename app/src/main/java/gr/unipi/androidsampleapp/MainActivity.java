@@ -3,6 +3,8 @@ package gr.unipi.androidsampleapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -44,16 +46,33 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
+if (locale.getLanguage().equals("el")) {
+           menu.findItem(R.id.menu_main_language).setIcon(R.drawable.ic_launcher);}
+        else
+            {menu.findItem(R.id.menu_main_language).setIcon(R.drawable.ic_launcher1);
+        }
+
         return true;
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.menu_main_language:
-                changeLocale();
+               changeLocale();
+
+                Toast.makeText(this,R.string.main_activity_toast, Toast.LENGTH_LONG).show();
                 return true;
+            case R.id.menusu:
+                Toast.makeText(this,"Find a teacher now",Toast.LENGTH_LONG).show();
+               // openPage();
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -72,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
     private void changeLocale() {
         if (locale.getLanguage().equals("el")) {
             locale = new Locale("en");
+            locale.getDisplayCountry();
+
         } else if (locale.getLanguage().equals("en")) {
             locale = new Locale("el");
         }
@@ -93,6 +114,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    private void openPage()
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.tanea.gr"));
+        startActivity(intent);
+
     }
 
     /**

@@ -7,14 +7,12 @@
         android:title="@string/main_menu_change_language"
         app:showAsAction="always|withText"
         android:orderInCategory="1"
-
         />
     <item
         android:id="@+id/menusu"
         android:icon="@mipmap/ic_unipi_logo"
-        android:title="lalalala"
+        android:title="Teacher"
         app:showAsAction="ifRoom|withText"
         android:orderInCategory="2"
         />
-
 </menu>
