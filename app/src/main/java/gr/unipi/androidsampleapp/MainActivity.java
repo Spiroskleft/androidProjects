@@ -129,9 +129,15 @@ if (locale.getLanguage().equals("el")) {
     /**
      * Starts the {@link ImplicitIntentsActivity}
      */
+
+
+
+
     public void goToImplicitIntents(View view) {
         Intent intent = new Intent(this, ImplicitIntentsActivity.class);
         startActivity(intent);
+
+        System.out.println("Test");
     }
 
     public void goToCamera(View view) {
