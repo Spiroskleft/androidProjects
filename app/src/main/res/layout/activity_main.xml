@@ -49,4 +49,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="gotoCamera"
+        android:text="Test Camera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_go_implicit_intent"/>
+
 </android.support.constraint.ConstraintLayout>

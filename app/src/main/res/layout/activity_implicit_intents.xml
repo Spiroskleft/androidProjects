@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/implicit_intent_url_hint"
-        android:text="@string/implicit_intent_url_hint"
         android:imeOptions="actionGo"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        android:text="@string/implicit_intent_url_hint" />
 
     <Button
         android:id="@+id/btn_implicit_intents_url"
@@ -26,13 +26,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/implicit_intent_phone_hint"
-        android:text="@string/implicit_intent_phone_hint"
         android:imeOptions="actionGo"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:text="@string/implicit_intent_phone_hint" />
 
     <Button
         android:id="@+id/btn_implicit_intents_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/implicit_intent_phone_btn" />
+
+
+
 </LinearLayout>
+<!--<ImageView-->
+<!--android:id="@+id/mImageView"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content" />-->

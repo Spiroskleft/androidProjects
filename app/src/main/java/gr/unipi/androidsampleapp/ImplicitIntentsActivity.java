@@ -4,14 +4,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +30,7 @@ public class ImplicitIntentsActivity extends AppCompatActivity {
     private EditText phoneText;
     private Button phoneButton;
 
+
     private SharedPreferences preferences;
 
     @Override
@@ -39,6 +44,9 @@ public class ImplicitIntentsActivity extends AppCompatActivity {
         urlButton = (Button) findViewById(R.id.btn_implicit_intents_url);
         phoneText = (EditText) findViewById(R.id.txt_implicit_intents_phone);
         phoneButton = (Button) findViewById(R.id.btn_implicit_intents_phone);
+
+
+
 
         urlText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -148,4 +156,24 @@ public class ImplicitIntentsActivity extends AppCompatActivity {
             }
         }
     }
+
+//    static final int REQUEST_IMAGE_CAPTURE = 1;
+//
+//    public void dispatchTakePictureIntent() {
+//        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+//            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+//        }
+//    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+//            Bundle extras = data.getExtras();
+//            Bitmap imageBitmap = (Bitmap) extras.get("data");
+//            ImageView mImageView = null;
+//            mImageView.setImageBitmap(imageBitmap);
+//        }
+//    }
+
 }

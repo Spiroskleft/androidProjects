@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="gr.unipi.androidsampleapp">
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+
 
     <application
         android:allowBackup="true"
@@ -16,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ImplicitIntentsActivity" />
+        <activity android:name=".MyCameraActivity"/>
         <activity android:name=".SendToActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

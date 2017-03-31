@@ -102,4 +102,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ImplicitIntentsActivity.class);
         startActivity(intent);
     }
+
+    public void gotoCamera(View view) {
+        Intent intent = new Intent(this, MyCameraActivity.class);
+        startActivity(intent);
+
+    }
+
+
 }
